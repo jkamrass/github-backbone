@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="github-face-app">
+      <div class="container">
+        <header class="text-center">
+          <h1>Github Face Search</h1>
+          <hr />
+        </header>
+        <div class="row faces"></div>
+        <form class="search-face">
+          <hr />
+          <h3>Search a Face</h3>
+          <input type="text" class="form-control mb-3" placeholder="Sha Hash" />
+          <button class="btn btn-primary">Search</button>
+        </form>
+      </div>
+    </section>
+
+    <script id="face-template" type="text/x-handlebars-template">
+      <div class="col-md-4 px-2 pb-2">
+        <div class="face border px-2 py-2">
+          <h4>
+            Login: {{userName}}
+          </h4>
+          <img src="{{profilePic}}" alt="" />
+        </div>
+      </div>
+    </script>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/handlebars/dist/handlebars.js"></script>
+    <script src="node_modules/underscore/underscore.js"></script>
+    <script src="node_modules/backbone/backbone.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
